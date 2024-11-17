@@ -1,6 +1,15 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+  }
+
+
   const links = (
     <>
       <li>
@@ -48,24 +57,31 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-2">
-        {/* avatar */}
-        <div
-          tabIndex={0}
-          role="button"
-          className="btn btn-ghost btn-circle avatar"
-        >
-          <div className="w-10 rounded-full">
-            <img
-              title="user name"
-              alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-            />
-          </div>
-        </div>
+        {user ? (
+          <div className="flex justify-center items-center">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  title={user?.displayName}
+                  alt={user?.displayName}
+                  src={user?.photoURL}
+                />
+              </div>
+            </div>
 
-        <Link className="btn btn-outline btn-sm" to="/login">
-          Log In
-        </Link>
+            <Link onClick={handleLogOut} className="btn btn-outline btn-sm">
+            Logout
+          </Link>
+          </div>
+        ) : (
+          <Link className="btn btn-outline btn-sm" to="/login">
+            Log In
+          </Link>
+        )}
       </div>
     </div>
   );
