@@ -6,9 +6,8 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
-    logOut()
-  }
-
+    logOut();
+  };
 
   const links = (
     <>
@@ -56,9 +55,9 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end space-x-2">
+      <div className="navbar-end">
         {user ? (
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center gap-2">
             <div
               tabIndex={0}
               role="button"
@@ -74,8 +73,8 @@ const Navbar = () => {
             </div>
 
             <Link onClick={handleLogOut} className="btn btn-outline btn-sm">
-            Logout
-          </Link>
+              Logout
+            </Link>
           </div>
         ) : (
           <Link className="btn btn-outline btn-sm" to="/login">

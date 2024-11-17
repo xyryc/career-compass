@@ -2,9 +2,10 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const { userLogin, setUser } = useContext(AuthContext);
+  const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
@@ -31,14 +32,31 @@ const Login = () => {
       });
   };
 
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+        toast.success("Log in successfully!");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.code);
+      });
+  };
+
   return (
-    <div className="flex justify-center items-center pb-10">
-      <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10">
+    <div className="flex justify-center items-center pb-10" >
+      <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10 border">
         <h2 className="font-semibold text-2xl text-center">
           Login your account
         </h2>
         <div className="border-b-[1px] mt-8"></div>
-        <form onSubmit={handleSubmit} className="card-body">
+       
+        <form onSubmit={handleSubmit} className="card-body ">
+        <button onClick={handleGoogleSignIn} className="btn btn-outline" type="button">
+          <FcGoogle /> Login with Google
+        </button>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email Address</span>
