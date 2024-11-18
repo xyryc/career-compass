@@ -7,9 +7,11 @@ import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
-  const [error, setError] = useState({});
+  const { userLogin, setUser, signInWithGoogle, setLoading } =
+    useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+
   const location = useLocation();
   const navigate = useNavigate();
   // console.log(location);
@@ -29,7 +31,9 @@ const Login = () => {
         toast.success(`Logged in as ${result.user?.email}`);
       })
       .catch((err) => {
-        setError({ ...error, login: err.code });
+        console.log(err.message);
+        toast.error(err.message);
+        setLoading(false);
       });
   };
 
@@ -44,12 +48,17 @@ const Login = () => {
       .catch((error) => {
         console.log(error);
         toast.error(error.code);
+        setLoading(false);
       });
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
     // console.log("show pass", showPassword);
+  };
+
+  const handleForgetPassword = () => {
+    navigate("/forget-password", { state: { email } });
   };
 
   return (
@@ -81,13 +90,13 @@ const Login = () => {
               name="email"
               placeholder="Enter your email address"
               className="input input-bordered"
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
 
-
-                  {/* password */}
-                  <div className="form-control">
+          {/* password */}
+          <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
@@ -107,11 +116,15 @@ const Login = () => {
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </button>
             </div>
-            {/* <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+            <label className="label">
+              <button
+                onClick={handleForgetPassword}
+                className="label-text-alt link link-hover"
+                type="button"
+              >
                 Forgot password?
-              </a>
-            </label> */}
+              </button>
+            </label>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-neutral rounded-md">Login</button>
