@@ -4,10 +4,10 @@ import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   const services = useLoaderData();
-  const [showAll, setShowAll] = useState(false); // State to toggle showing all services
+  const [showAll, setShowAll] = useState(false); 
 
   const handleShowAll = () => {
-    setShowAll(true); // Set state to true to show all services
+    setShowAll(true);
   };
 
   return (
@@ -16,7 +16,7 @@ const Services = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {services
-          .slice(0, showAll ? services.length : 6) // Show all or limit to 6 services
+          .slice(0, showAll ? services.length : 6) 
           .map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -25,7 +25,7 @@ const Services = () => {
       {!showAll && (
         <button
           className="btn btn-neutral mt-4"
-          onClick={handleShowAll} // Call the handler to update state
+          onClick={handleShowAll} 
         >
           Show All
         </button>

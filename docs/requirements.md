@@ -118,7 +118,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 **Challenges Requirements:**
 
-1. **My Profile:** Create a protected route where, after logging in, users can see their information like- name, email, and photoURL and there will be a form with 2 input fields for name and photoURL. Users can edit the name and photoURL and save the changes. This "saving" process uses Firebase's [updateProfile()](https://firebase.google.com/docs/auth/web/manage-users?hl=en&authuser=0) method to update the user's information stored securely in Firebase.
+1. **My Profile:** Create a protected route where, after logging in, users can see their information like- name, email, and photoURL and there will be a form with 2 input fields for name and photoURL. Users can edit the name and photoURL and save the changes. This "saving" process uses Firebase's [updateProfile()](https://firebase.google.com/docs/auth/web/manage-users?hl=en&authuser=0) method to update the user's information stored securely in Firebase. ✅
 2. Implement show and hide passwords on the registration page. By default, it won’t show the password, but when you click on the “Eye” icon, it will. In this way, you need to toggle.
 3. Implement any of 1 packages from the following list:
 
