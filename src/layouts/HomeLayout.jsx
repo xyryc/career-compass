@@ -9,15 +9,21 @@ const HomeLayout = () => {
   const { loading } = useContext(AuthContext);
 
   return (
-    <div>
-      <Navbar />
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <Navbar />
 
-      <div className="min-h-[calc(100vh-300px)]">
-        {loading ? <Loading /> : <Outlet />}
-      </div>
+          <div className="min-h-[calc(100vh-300px)]">
+            <Outlet />
+          </div>
 
-      <Footer />
-    </div>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 

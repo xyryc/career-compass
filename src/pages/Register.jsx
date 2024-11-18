@@ -1,25 +1,25 @@
-import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
-  const { createNewUser, setUser, updateUserProfile, signInWithGoogle } =
-    useContext(AuthContext);
-  const [error, setError] = useState({});
-  const navigate = useNavigate();
+  const {
+    createNewUser,
+    setUser,
+    updateUserProfile,
+    signInWithGoogle,
+    setLoading,
+  } = useContext(AuthContext);
 
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // get form data
     const form = new FormData(e.target);
     const name = form.get("name");
-    if (name.length < 5) {
-      setError({ ...error, name: "name must be more than 5 characters long" });
-      return;
-    }
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
@@ -36,12 +36,15 @@ const Register = () => {
             navigate("/");
           })
           .catch((err) => {
-            toast.error(err);
-            console.log(err);
+            toast.error(err.message);
+            console.log(err.message);
+            setLoading(false);
           });
       })
       .catch((error) => {
-        toast.error(error.code, error.message);
+        console.log(error.message);
+        toast.error(error.message);
+        setLoading(false);
       });
   };
 
@@ -55,7 +58,7 @@ const Register = () => {
       })
       .catch((error) => {
         console.log(error);
-        toast.error(error.code);
+        toast.error(error);
       });
   };
 
@@ -87,9 +90,6 @@ const Register = () => {
               required
             />
           </div>
-          {error.name && (
-            <span className="text-xs text-red-500">{error.name}</span>
-          )}
 
           {/* photo url */}
           <div className="form-control">
@@ -118,6 +118,7 @@ const Register = () => {
               required
             />
           </div>
+
           <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
@@ -141,7 +142,7 @@ const Register = () => {
         </form>
         <p className="2xl:font-semibold text-center">
           {`Already Have An Account? `}
-          <Link className="text-red-500" to="/auth/login">
+          <Link className="text-red-500" to="/login">
             Login
           </Link>
         </p>
