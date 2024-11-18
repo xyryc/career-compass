@@ -25,6 +25,15 @@ const Register = () => {
     const password = form.get("password");
     // console.log({ name, photo, email, password });
 
+    // Password validation
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      toast.error(
+        "Password must contain at least one uppercase letter, one lowercase letter and be at least 6 characters long."
+      );
+      return;
+    }
+
     createNewUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -53,7 +62,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         setUser(result.user);
-        toast.success("Log in successfully!");
+        toast.success("Logged in successfully!");
         navigate("/");
       })
       .catch((error) => {

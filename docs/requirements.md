@@ -96,10 +96,10 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - password ✅
 - A Link that will redirect to the login page ✅
 - Google Login ✅
-- For password verification you need to follow this \-
-- Must have an Uppercase letter in the password
-- Must have a Lowercase letter in the password
-- Length must be at least 6 character
+- For password verification you need to follow this \- ✅
+- Must have an Uppercase letter in the password  ✅
+- Must have a Lowercase letter in the password ✅
+- Length must be at least 6 character ✅
 
 **⚠️Show all the error and success messages by using toast/sweet alert.**
 

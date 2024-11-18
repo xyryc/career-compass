@@ -21,7 +21,6 @@ const Login = () => {
 
     userLogin(email, password)
       .then((result) => {
-  
         setUser(result.user);
         navigate(location?.state ? location.state : "/");
         toast.success(`Logged in as ${result.user?.email}`);
@@ -36,7 +35,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         setUser(result.user);
-        toast.success("Log in successfully!");
+        toast.success(`Logged in as ${result.user?.email}`);
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
