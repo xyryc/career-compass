@@ -4,10 +4,12 @@ import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { Helmet } from "react-helmet-async";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState({});
+  const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   // console.log(location);
@@ -45,9 +47,14 @@ const Login = () => {
       });
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+    // console.log("show pass", showPassword);
+  };
+
   return (
     <div className="flex justify-center items-center pb-10">
-<Helmet>
+      <Helmet>
         <title>Login | Career Compass</title>
       </Helmet>
 
@@ -77,24 +84,29 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-control">
+
+
+                  {/* password */}
+                  <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              className="input input-bordered"
-              required
-            />
-            {error.login && (
-              <label className="label">
-                <span className="label-text-alt text-red-500">
-                  {error.login}
-                </span>
-              </label>
-            )}
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Enter your password"
+                className="input input-bordered w-full"
+                required
+              />
+              <button
+                className="btn btn-sm absolute right-2 top-2"
+                type="button"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </button>
+            </div>
             {/* <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?

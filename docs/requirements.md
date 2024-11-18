@@ -110,7 +110,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 10. **404 page:** Create a 404 page/ not found page. ✅
 11. **Extra route:** Add 1 more extra route to your website. This route should be private and protected, and its contents should be meaningful and relevant.
 
-12. **Dynamic Title:** You need to implement a dynamic title for each page. 
+12. **Dynamic Title:** You need to implement a dynamic title for each page. ✅
 
 13. Once a user is logged in, user information will show on the navbar even if he/she reloads the website, this info will not disappear. You can show a loader when the logged-in user info is in a loading state. You can implement this using Firebase's onAuthStateChange method. ✅
 
