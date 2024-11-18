@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { FaUserAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const { image, service_name, category, price, counselor } = service;
+  const { id, image, service_name, category, price, counselor } = service;
 
   return (
     <div className="card bg-base-100 shadow-xl border rounded-lg p-4">
@@ -23,7 +24,12 @@ const ServiceCard = ({ service }) => {
           <FaUserAlt className="text-blue-500 mr-2" />
           <p className="text-sm text-gray-500">{counselor}</p>
         </div>
-        <button className="btn btn-outline mt-4 w-full">Learn More</button>
+        <Link
+          to={`/service-details/${id}`}
+          className="btn btn-outline mt-4 w-full"
+        >
+          Learn More
+        </Link>
       </div>
     </div>
   );

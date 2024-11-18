@@ -21,11 +21,10 @@ const Login = () => {
 
     userLogin(email, password)
       .then((result) => {
-        const user = result.user;
-        // console.log(user);
-        setUser(user);
+  
+        setUser(result.user);
         navigate(location?.state ? location.state : "/");
-        toast.success(`Logged in as ${user?.email}`);
+        toast.success(`Logged in as ${result.user?.email}`);
       })
       .catch((err) => {
         setError({ ...error, login: err.code });
@@ -38,6 +37,7 @@ const Login = () => {
         console.log(result.user);
         setUser(result.user);
         toast.success("Log in successfully!");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -46,17 +46,21 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center pb-10" >
+    <div className="flex justify-center items-center pb-10">
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10 border">
         <h2 className="font-semibold text-2xl text-center">
           Login your account
         </h2>
         <div className="border-b-[1px] mt-8"></div>
-       
+
         <form onSubmit={handleSubmit} className="card-body ">
-        <button onClick={handleGoogleSignIn} className="btn btn-outline" type="button">
-          <FcGoogle /> Login with Google
-        </button>
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-outline"
+            type="button"
+          >
+            <FcGoogle /> Login with Google
+          </button>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email Address</span>
