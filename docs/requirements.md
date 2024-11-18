@@ -12,13 +12,13 @@ For this project, will develop a **Career Counseling Website** designed to guide
 ## **Key Rules:** {#key-rules:}
 
 - **Github Commits:** Include a minimum of 10 notable Github commits. Add a meaningful readme.md file with the name of your website and a live site URL. Include a minimum of five bullet points features and characteristics of your website.
-- **Environment Variables:** Use environment variables for Firebase config keys.
-- **Responsiveness:** Make it responsive for all devices. You must make it responsive for mobile, tablet, and desktop views.
-- **Host your Application:** You can choose deployment systems like Netlify, Surge, and Firebase for hosting. As you are developing a single-page application
-  - ensure that the page doesn't throw any error on reloading from any routes.
-  - Add your domain for authorization to Firebase if you use Netlify / surge
-  - Logged in User must not redirect to Login on reloading any private route
-- **Make sure your design is unique.** First, decide what kind of website you want to make. Then, search online or check out websites like ThemeForest to get ideas for the design. But remember, your website idea shouldn't be similar to any projects you've done before, and it shouldn't be like any examples in our modules or conceptual sessions.
+- **Environment Variables:** Use environment variables for Firebase config keys. ✅
+- **Responsiveness:** Make it responsive for all devices. You must make it responsive for mobile, tablet, and desktop views. 
+- **Host your Application:** You can choose deployment systems like Netlify, Surge, and Firebase for hosting. As you are developing a single-page application ✅
+  - ensure that the page doesn't throw any error on reloading from any routes. ✅
+  - Add your domain for authorization to Firebase if you use Netlify / surge ✅
+  - Logged in User must not redirect to Login on reloading any private route ✅
+- **Make sure your design is unique.** First, decide what kind of website you want to make. Then, search online or check out websites like ThemeForest to get ideas for the design. But remember, your website idea shouldn't be similar to any projects you've done before, and it shouldn't be like any examples in our modules or conceptual sessions. 
 
 - You can also look for free resources on [blogs](https://bootcamp.uxdesign.cc/free-images-and-resources-collection-for-website-c77f2fc46ce5) to help with your website.
 
@@ -26,7 +26,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 **Layout Structure**
 
-1. **Navbar:** The home page will have a navbar, and active routes will be implemented on the navbar. The navbar will contain the Website name, Home, and My Profile (challenges requirements 1).
+1. **Navbar:** The home page will have a navbar, and active routes will be implemented on the navbar. The navbar will contain the Website name, Home, and My Profile (challenges requirements 1). 
 
    - If a user is logged in, the user image will show on the Navbar and When you hover over the user image it will show the user name. ✅
    - If the user is not logged in it will show a login button. ✅
@@ -36,7 +36,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 3. **Footer:** A Footer with all relevant information and eye-catching design. ✅
 
-**💡Make sure the Navbar and Footer are showing on all pages without an Error/404 page.**
+**💡Make sure the Navbar and Footer are showing on all pages without an Error/404 page.** ✅
 
 **JSON Data Generation:**
 
@@ -53,16 +53,16 @@ For this project, will develop a **Career Counseling Website** designed to guide
     - and a “Learn More” button.
     - You can add other information for each data if you want
 
-4. Give a website name and it will show on the website title.
+4. Give a website name and it will show on the website title. ✅
 
 **💡 The home page will have these sections Slider, Services, & 2 extra section**
 
 **Home Page:**
 
 5. **Slider:** Add a slider (Daisy UI slider or Swiper slider) with a minimum of 3 slides.
-6. **Services Section: ** In the services section you need to create a JSON minimum of 6 data. You need to show some data on the card layout on the home page.  
+6. **Services Section: ** In the services section you need to create a JSON minimum of 6 data. You need to show some data on the card layout on the home page.   ✅
    **6.1.** Each service card will contain \- JSON Data ✅
-   - a relevant Image,
+   - a relevant Image, 
    - Service name
    - Category
    - pricing
@@ -101,16 +101,16 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - Must have a Lowercase letter in the password ✅
 - Length must be at least 6 character ✅
 
-**⚠️Show all the error and success messages by using toast/sweet alert.**
+**⚠️Show all the error and success messages by using toast/sweet alert.** ✅
 
-**💡**Don’t implement email verification method as it will inconvenience the examiner. If you want, you can add these after receiving the assignment result.
+**💡**Don’t implement email verification method as it will inconvenience the examiner. If you want, you can add these after receiving the assignment result. 
 
 **Others:**
 
 10. **404 page:** Create a 404 page/ not found page. ✅
 11. **Extra route:** Add 1 more extra route to your website. This route should be private and protected, and its contents should be meaningful and relevant.
 
-12. **Dynamic Title:** You need to implement a dynamic title for each page.
+12. **Dynamic Title:** You need to implement a dynamic title for each page. 
 
 13. Once a user is logged in, user information will show on the navbar even if he/she reloads the website, this info will not disappear. You can show a loader when the logged-in user info is in a loading state. You can implement this using Firebase's onAuthStateChange method. ✅
 

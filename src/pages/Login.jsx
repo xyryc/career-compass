@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
@@ -46,6 +47,10 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center pb-10">
+<Helmet>
+        <title>Login | Career Compass</title>
+      </Helmet>
+
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10 border">
         <h2 className="font-semibold text-2xl text-center">
           Login your account

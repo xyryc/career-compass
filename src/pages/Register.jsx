@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const {
@@ -73,6 +74,10 @@ const Register = () => {
 
   return (
     <div className="pb-10 flex justify-center items-center">
+      <Helmet>
+        <title>Register | Career Compass</title>
+      </Helmet>
+
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10 border">
         <h2 className="font-semibold text-2xl text-center">
           Register your account

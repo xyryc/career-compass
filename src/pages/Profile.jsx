@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const { user, setUser, updateUserProfile } = useContext(AuthContext);
@@ -26,6 +27,10 @@ const Profile = () => {
 
   return (
     <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
+      <Helmet>
+        <title>Profile | Career Compass</title>
+      </Helmet>
+
       <h2 className="text-xl font-bold text-center mb-4">My Profile</h2>
 
       {/* User Info */}
