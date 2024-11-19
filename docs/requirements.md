@@ -130,7 +130,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 3. Implement any of 1 packages from the following list:
 
-   1. [Swiper slider](https://swiperjs.com/)
+   1. [Swiper slider](https://swiperjs.com/) ✅
    2. [Aos animation](https://www.npmjs.com/package/aos)
 
 4. ##### **Forget Password**
@@ -153,8 +153,9 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - add reviews sction ✅
 - swiperjs slider ✅
 - 2 more sections ✅
+- aos animations
 - readme file
 - update json data
 - add stats section
 - add sponsored section
-- 1 more private route ***
+- 1 more private route \*\*\*

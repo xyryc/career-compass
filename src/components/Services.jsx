@@ -6,7 +6,7 @@ const Services = () => {
   const services = useLoaderData();
 
   return (
-    <div className="py-10">
+    <div className="py-16">
       <SectionTitle
         title="Featured Services"
         subtitle="Explore a wide range of services tailored to help you achieve your professional aspirations."

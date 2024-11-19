@@ -13,7 +13,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div className="py-10">
+    <div className="py-16">
       <SectionTitle
         title="What Our Clients Say"
         subtitle="Hear from those who've transformed their careers with our guidance!"

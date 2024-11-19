@@ -3,10 +3,19 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import { AuthContext } from "../provider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HomeLayout = () => {
   const { loading } = useContext(AuthContext);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 100,
+    });
+  }, []);
 
   return (
     <>

@@ -20,7 +20,7 @@ const Slider = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -33,7 +33,7 @@ const Slider = () => {
         {sliderData.map((slider) => (
           <SwiperSlide key={slider.id}>
             <img
-              className="w-full h-[calc(100vh-64px)] object-cover relative -z-50"
+              className="w-full h-[80vh] object-cover relative -z-50"
               src={slider.image}
               alt={slider.title}
             />
@@ -43,8 +43,12 @@ const Slider = () => {
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-4 shadow-2xl z-10">
-              <h2 className="text-4xl font-bold mb-2">{slider.title}</h2>
-              <p className="text-lg lg:w-2/5 mx-auto">{slider.description}</p>
+              <h2 className="text-4xl lg:text-6xl font-bold mb-2">
+                {slider.title}
+              </h2>
+              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto">
+                {slider.description}
+              </p>
             </div>
           </SwiperSlide>
         ))}
