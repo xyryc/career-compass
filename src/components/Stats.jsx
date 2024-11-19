@@ -18,7 +18,7 @@ const StatsSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
           {/* Stat 1 */}
           <div
-            className="p-6 rounded-lg shadow-lg text-center"
+            className="p-6 rounded-2xl shadow-xl text-center"
             data-aos="zoom-in"
             data-aos-delay="200"
           >
@@ -29,7 +29,7 @@ const StatsSection = () => {
 
           {/* Stat 2 */}
           <div
-            className="p-6 rounded-lg shadow-lg text-center"
+            className="p-6 rounded-2xl shadow-xl text-center"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
@@ -40,7 +40,7 @@ const StatsSection = () => {
 
           {/* Stat 3 */}
           <div
-            className="p-6 rounded-lg shadow-lg text-center"
+            className="p-6 rounded-2xl shadow-xl text-center"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
@@ -51,7 +51,7 @@ const StatsSection = () => {
 
           {/* Stat 4 */}
           <div
-            className="p-6 rounded-lg shadow-lg text-center"
+            className="p-6 rounded-2xl shadow-xl text-center"
             data-aos="zoom-in"
             data-aos-delay="500"
           >

@@ -12,15 +12,36 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-blue-500 font-bold underline" : ""
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
 
       <li>
-        <NavLink to="/services">Services</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-blue-500 font-bold underline" : ""
+          }
+          to="/services"
+        >
+          Services
+        </NavLink>
       </li>
 
       <li>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-blue-500 font-bold underline" : ""
+          }
+          to="/profile"
+        >
+          Profile
+        </NavLink>
       </li>
     </>
   );

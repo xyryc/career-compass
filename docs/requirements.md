@@ -153,9 +153,9 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - add reviews sction ✅
 - swiperjs slider ✅
 - 2 more sections ✅
-- aos animations
-- readme file
-- update json data
-- add stats section
-- add sponsored section
+- aos animations ✅
+- add stats section ✅
+- readme file 
+- update json data 
+- add sponsored section 
 - 1 more private route \*\*\*
