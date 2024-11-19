@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const ForgetPassword = () => {
   const { resetPassword } = useContext(AuthContext);
@@ -31,6 +32,9 @@ const ForgetPassword = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
+      <Helmet>
+        <title>Forgot Password | Career Compass</title>
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-md p-10 border">
         <h2 className="text-2xl font-semibold text-center">Reset Password</h2>
         <form className="card-body" onSubmit={handleResetPassword}>

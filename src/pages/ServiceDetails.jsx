@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import defaultUser from "../assets/default_user.png";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -30,6 +31,7 @@ const ServiceDetails = () => {
     if (newComment.trim()) {
       const currentDateTime = new Date().toLocaleString();
       const commentDetails = {
+        userPhoto: user?.photoURL || defaultUser,
         username: user?.displayName || "Anonymous",
         comment: newComment.trim(),
         timestamp: currentDateTime,
@@ -88,12 +90,20 @@ const ServiceDetails = () => {
             comments.map((comment, index) => (
               <div
                 key={index}
-                className="p-4 bg-gray-100 rounded-lg mt-2 border"
+                className="p-4 bg-gray-100 rounded-lg mt-2 border flex items-start gap-4"
               >
-                <p className="text-sm text-gray-500">
-                  {comment.username} • {comment.timestamp}
-                </p>
-                <p className="mt-2">{comment.comment}</p>
+                <img
+                  src={comment.userPhoto}
+                  alt={comment.username}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-sm text-gray-500">
+                    <span className="font-medium">{comment.username}</span> •{" "}
+                    {comment.timestamp}
+                  </p>
+                  <p className="mt-2">{comment.comment}</p>
+                </div>
               </div>
             ))
           ) : (

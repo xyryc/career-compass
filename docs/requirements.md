@@ -18,7 +18,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
   - ensure that the page doesn't throw any error on reloading from any routes. ✅
   - Add your domain for authorization to Firebase if you use Netlify / surge ✅
   - Logged in User must not redirect to Login on reloading any private route ✅
-- **Make sure your design is unique.** First, decide what kind of website you want to make. Then, search online or check out websites like ThemeForest to get ideas for the design. But remember, your website idea shouldn't be similar to any projects you've done before, and it shouldn't be like any examples in our modules or conceptual sessions.
+- **Make sure your design is unique.** First, decide what kind of website you want to make. Then, search online or check out websites like ThemeForest to get ideas for the design. But remember, your website idea shouldn't be similar to any projects you've done before, and it shouldn't be like any examples in our modules or conceptual sessions. ✅
 
 - You can also look for free resources on [blogs](https://bootcamp.uxdesign.cc/free-images-and-resources-collection-for-website-c77f2fc46ce5) to help with your website.
 
@@ -26,13 +26,13 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 **Layout Structure**
 
-1. **Navbar:** The home page will have a navbar, and active routes will be implemented on the navbar. The navbar will contain the Website name, Home, and My Profile (challenges requirements 1).
+1. **Navbar:** The home page will have a navbar, and active routes will be implemented on the navbar. The navbar will contain the Website name, Home, and My Profile (challenges requirements 1). ✅
 
    - If a user is logged in, the user image will show on the Navbar and When you hover over the user image it will show the user name. ✅
    - If the user is not logged in it will show a login button. ✅
    - So if a user is logged in you will show the user image and a logout button. If you click on the logout button make sure you have logged out. ✅
 
-2. **Main Section:** Main Section will show different pages based on routes.
+2. **Main Section:** Main Section will show different pages based on routes. ✅
 
 3. **Footer:** A Footer with all relevant information and eye-catching design. ✅
 
@@ -146,3 +146,11 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - Assignment Category
 - Your GitHub repository
 - Your Live site link
+
+
+# ToDo:
+- swiperjs slider
+- readme file
+- 2 more sections
+- 1 more private route
+- update json data
