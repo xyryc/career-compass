@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaRegCompass } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -74,7 +75,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
-          Career Compass
+          <FaRegCompass/>Career Compass
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

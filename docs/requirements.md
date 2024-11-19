@@ -69,7 +69,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
    - Counselor Name
    - and a “Learn More” button.
 
-**_( and other info what you want to show on the card is totally up to you)_**
+**_( and other info what you want to show on the card is totally up to you)_**✅
 
 7. **Service Details Page: (Protected)** ✅
    When the user clicks the “Learn More” button it takes the user to the Service Details page. This page will be a protected route and ensure that the private route moves to the login page if the user is not logged in. You need to show all the information about the selected service. ✅
@@ -131,7 +131,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 3. Implement any of 1 packages from the following list:
 
    1. [Swiper slider](https://swiperjs.com/) ✅
-   2. [Aos animation](https://www.npmjs.com/package/aos)
+   2. [Aos animation](https://www.npmjs.com/package/aos) ✅
 
 4. ##### **Forget Password**
 
@@ -155,7 +155,9 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - 2 more sections ✅
 - aos animations ✅
 - add stats section ✅
-- readme file 
-- update json data 
-- add sponsored section 
-- 1 more private route \*\*\*
+- add sponsored section
+- update json data
+- readme file
+- work on footer
+- 1 more private route \*\*\* --> appointment functionality
+- make sure to build and deploy

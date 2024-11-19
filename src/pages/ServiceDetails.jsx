@@ -22,10 +22,10 @@ const ServiceDetails = () => {
     duration,
     counselor,
     rating,
-    language, 
+    language,
     target_audience,
-    location, 
-    seats_available, 
+    location,
+    seats_available,
     prerequisites,
     service_format,
     tools_provided,
@@ -34,7 +34,7 @@ const ServiceDetails = () => {
     testimonial_link,
     booking_deadline,
     tags,
-    contact_info
+    contact_info,
   } = singleService;
   const { user } = useContext(AuthContext);
 
@@ -61,8 +61,8 @@ const ServiceDetails = () => {
         <title>Service Details | Career Compass</title>
       </Helmet>
 
-       {/* Service Image */}
-       <div className="relative">
+      {/* Service Image */}
+      <div className="relative">
         <img
           src={image}
           alt={service_name}
@@ -158,12 +158,13 @@ const ServiceDetails = () => {
           <a
             href={testimonial_link}
             className="text-blue-500 underline text-sm"
-            target="_blank"
             rel="noopener noreferrer"
           >
             Read Testimonials
           </a>
-          <p className="text-sm text-gray-500">Booking Deadline: {booking_deadline}</p>
+          <p className="text-sm text-gray-500">
+            Booking Deadline: {booking_deadline}
+          </p>
           <p className="text-sm text-gray-500">Contact: {contact_info}</p>
         </div>
       </div>
