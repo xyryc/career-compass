@@ -16,7 +16,7 @@ const HomeLayout = () => {
         <div className="font-poppins">
           <Navbar />
 
-          <div className="min-h-[calc(100vh-300px)] container mx-auto px-4 md:px-0">
+          <div className="min-h-[calc(100vh-300px)]">
             <Outlet />
           </div>
 

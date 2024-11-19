@@ -124,7 +124,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
    This "saving" process uses Firebase's [updateProfile()](https://firebase.google.com/docs/auth/web/manage-users?hl=en&authuser=0)
    method to update the user's information stored securely in Firebase. ✅
 
-2. Implement show and hide passwords on the registration page.
+2. Implement show and hide passwords on the registration page. ✅
    By default, it won’t show the password, but when you click on the “Eye” icon,
    it will. In this way, you need to toggle. ✅
 
@@ -135,7 +135,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 4. ##### **Forget Password**
 
-   Make your forgot password feature functional. Clicking "forget password" redirects the user to the forget password page, containing a form with an email field and a reset password button.
+   Make your forgot password feature functional. Clicking "forget password" redirects the user to the forget password page, containing a form with an email field and a reset password button. ✅
 
 - Suppose a user enters an email address on the login page. Show the email also in the forget password form.
 - On clicking the reset button. Redirect the user to Gmail. ✅
@@ -149,9 +149,12 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 # ToDo:
 
-- swiperjs slider
+- fix padding✅
+- add reviews sction ✅
+- swiperjs slider ✅
+- 2 more sections ✅
 - readme file
-- 2 more sections
-- 1 more private route
 - update json data
-- fix padding
+- add stats section
+- add sponsored section
+- 1 more private route ***

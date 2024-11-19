@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "Empower Your Career",
+    "description": "Join our transformative workshops to build the skills and confidence you need for success."
+  },
+  {
+    "id": 2,
+    "image": "https://images.pexels.com/photos/5439148/pexels-photo-5439148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "Personalized Guidance",
+    "description": "Schedule one-on-one sessions with our experienced counselors to tailor your career plan."
+  },
+  {
+    "id": 3,
+    "image": "https://images.pexels.com/photos/5439157/pexels-photo-5439157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "Master the Art of Networking",
+    "description": "Learn strategic networking techniques to expand your professional connections."
+  },
+  {
+    "id": 4,
+    "image": "https://images.pexels.com/photos/5439157/pexels-photo-5439157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title": "Achieve Your Dreams",
+    "description": "Take actionable steps towards your goals with our structured career planning resources."
+  }
+]

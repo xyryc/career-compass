@@ -11,9 +11,12 @@ const Home = () => {
       </Helmet>
 
       <Slider />
-      <Services />
 
-      <Reviews/>
+      <div className="container mx-auto px-4 md:px-0">
+        <Services />
+      </div>
+
+      <Reviews />
     </div>
   );
 };
