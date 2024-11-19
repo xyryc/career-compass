@@ -124,8 +124,8 @@ For this project, will develop a **Career Counseling Website** designed to guide
    This "saving" process uses Firebase's [updateProfile()](https://firebase.google.com/docs/auth/web/manage-users?hl=en&authuser=0)
    method to update the user's information stored securely in Firebase. ✅
 
-2. Implement show and hide passwords on the registration page. 
-   By default, it won’t show the password, but when you click on the “Eye” icon, 
+2. Implement show and hide passwords on the registration page.
+   By default, it won’t show the password, but when you click on the “Eye” icon,
    it will. In this way, you need to toggle. ✅
 
 3. Implement any of 1 packages from the following list:
@@ -147,10 +147,11 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - Your GitHub repository
 - Your Live site link
 
-
 # ToDo:
+
 - swiperjs slider
 - readme file
 - 2 more sections
 - 1 more private route
 - update json data
+- fix padding

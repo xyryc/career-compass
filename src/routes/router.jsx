@@ -8,7 +8,7 @@ import Profile from "../pages/Profile";
 import PrivateRoutes from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 import ForgetPassword from "../pages/ForgetPassword";
-
+import ServicesPage from "../pages/ServicesPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: () => fetch("../services.json"),
+      },
+      {
+        path: "/services",
+        element: <ServicesPage />,
       },
       {
         path: "/service-details/:id",
@@ -48,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/forget-password",
-        element: <ForgetPassword/>,
+        element: <ForgetPassword />,
       },
     ],
   },

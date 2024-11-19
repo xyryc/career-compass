@@ -14,7 +14,6 @@ const ServiceCard = ({ service }) => {
     rating,
     counselor,
     language,
-
   } = service;
 
   return (
@@ -24,7 +23,7 @@ const ServiceCard = ({ service }) => {
         <img
           src={image}
           alt={service_name}
-          className="w-full h-48 object-cover rounded-t-lg"
+          className="w-full h-56 object-cover rounded-t-lg"
         />
       </figure>
       {/* Service Details */}

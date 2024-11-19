@@ -13,10 +13,10 @@ const HomeLayout = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="">
+        <div className="font-poppins">
           <Navbar />
 
-          <div className="min-h-[calc(100vh-300px)] container mx-auto px-4 md:px-0 font-poppins">
+          <div className="min-h-[calc(100vh-300px)] container mx-auto px-4 md:px-0">
             <Outlet />
           </div>
 

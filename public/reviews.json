@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "John Doe",
+    "profession": "Software Engineer",
+    "review": "The career counseling session exceeded my expectations! The counselor provided practical advice and helped me align my career goals with my personal aspirations."
+  },
+  {
+    "id": 2,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Emily Smith",
+    "profession": "Graphic Designer",
+    "review": "Mock interviews were incredibly helpful. I gained confidence and valuable tips to handle tricky questions. Highly recommend it for job seekers!"
+  },
+  {
+    "id": 3,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Michael Brown",
+    "profession": "Marketing Manager",
+    "review": "The resume review session was a game-changer. My resume now looks professional and stands out to recruiters. Worth every penny!"
+  },
+  {
+    "id": 4,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Sophia Johnson",
+    "profession": "Business Analyst",
+    "review": "I loved the group workshop on networking strategies. It was interactive, and the insights from experts were very informative."
+  },
+  {
+    "id": 5,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "James Wilson",
+    "profession": "HR Specialist",
+    "review": "The emotional intelligence workshop was transformative. I learned to handle workplace conflicts better and improved my interpersonal skills."
+  },
+  {
+    "id": 6,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Linda Taylor",
+    "profession": "Content Writer",
+    "review": "The career planning session was well-structured and inspiring. I now have a clear roadmap to achieve my career goals. Thank you!"
+  },
+  {
+    "id": 7,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Robert Lee",
+    "profession": "Project Manager",
+    "review": "Great session on balancing work and life! I’m already implementing some of the strategies, and they’re making a difference."
+  },
+  {
+    "id": 8,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Elizabeth Garcia",
+    "profession": "Data Scientist",
+    "review": "The technical career roadmap session was tailored to current industry demands. I feel better equipped to transition into the tech field."
+  },
+  {
+    "id": 9,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "David Martinez",
+    "profession": "Operations Manager",
+    "review": "Creative problem-solving workshop was hands-on and engaging. It sparked new ways of thinking that I can apply at work."
+  },
+  {
+    "id": 10,
+    "image": "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+    "name": "Emma Davis",
+    "profession": "Public Relations Specialist",
+    "review": "Highly recommend the public speaking workshop. The techniques taught here have boosted my confidence in delivering presentations."
+  }
+]
