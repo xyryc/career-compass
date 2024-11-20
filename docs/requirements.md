@@ -155,8 +155,8 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - 2 more sections ✅
 - aos animations ✅
 - add stats section ✅
+- update json data ✅
 - add sponsored section
-- update json data
 - readme file
 - work on footer
 - 1 more private route \*\*\* --> appointment functionality

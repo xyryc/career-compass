@@ -39,6 +39,17 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-blue-500 font-bold underline" : ""
           }
+          to="/appointments"
+        >
+          Appointments
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-blue-500 font-bold underline" : ""
+          }
           to="/profile"
         >
           Profile
@@ -69,13 +80,14 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-50"
           >
             {links}
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
-          <FaRegCompass/>Career Compass
+          <FaRegCompass />
+          Career Compass
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

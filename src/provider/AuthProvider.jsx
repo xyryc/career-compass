@@ -61,7 +61,7 @@ const AuthProvider = ({ children }) => {
     setLoading,
     updateUserProfile,
     signInWithGoogle,
-    resetPassword
+    resetPassword,
   };
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
@@ -28,9 +28,9 @@ const ServiceDetails = () => {
     seats_available,
     prerequisites,
     service_format,
-    tools_provided,
-    followup_support,
-    cancellation_policy,
+    // tools_provided,
+    // followup_support,
+    // cancellation_policy,
     testimonial_link,
     booking_deadline,
     tags,
@@ -40,6 +40,7 @@ const ServiceDetails = () => {
 
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const [isBooked, setIsBooked] = useState(false);
 
   const handleCommentSubmit = () => {
     if (newComment.trim()) {
@@ -52,6 +53,46 @@ const ServiceDetails = () => {
       };
       setComments([...comments, commentDetails]);
       setNewComment("");
+    }
+  };
+
+  // Check localStorage for existing appointment
+  useEffect(() => {
+    const existingAppointments =
+      JSON.parse(localStorage.getItem("appointments")) || [];
+
+    const alreadyBooked = existingAppointments.some(
+      (appointment) =>
+        appointment.email === user?.email && appointment.serviceId === id
+    );
+    setIsBooked(alreadyBooked);
+  }, [user, id]);
+
+  const handleAppointment = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const appointmentDate = formData.get("date");
+
+    if (appointmentDate) {
+      const newAppointment = {
+        serviceId: id,
+        serviceName: service_name,
+        email: user?.email,
+        date: appointmentDate,
+      };
+
+      const existingAppointments =
+        JSON.parse(localStorage.getItem("appointments")) || [];
+
+      existingAppointments.push(newAppointment);
+
+      localStorage.setItem(
+        "appointments",
+        JSON.stringify(existingAppointments)
+      );
+
+      setIsBooked(true);
+      document.getElementById("my_modal_2").close();
     }
   };
 
@@ -68,7 +109,13 @@ const ServiceDetails = () => {
           alt={service_name}
           className="w-full h-80 object-cover rounded-lg"
         />
-        <span className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+        <span
+          className={`absolute top-4 right-4 text-white px-3 py-1 rounded-full text-sm ${
+            category === "Online"
+              ? "bg-accent"
+              : "bg-neutral-300 text-neutral-600"
+          } `}
+        >
           {category}
         </span>
       </div>
@@ -88,6 +135,61 @@ const ServiceDetails = () => {
 
         {/* Description */}
         <p className="mt-4 text-gray-700 leading-relaxed">{description}</p>
+
+        {/* Appointment Button */}
+        <p className="text-center my-10">
+          <button
+            className={`btn ${isBooked ? "btn-disabled" : "btn-neutral"}`}
+            disabled={isBooked}
+            onClick={() => document.getElementById("my_modal_2").showModal()}
+          >
+            {isBooked ? "Appointment Made" : "Make Appointment"}
+          </button>
+        </p>
+
+        {/* Modal */}
+        <dialog id="my_modal_2" className="modal">
+          <form onSubmit={handleAppointment} className="modal-box">
+            <h3 className="text-2xl font-semibold mb-4 text-center">
+              Confirm Your Appointment
+            </h3>
+
+            <div className="mb-4 space-y-2">
+              <p className="text-gray-600">
+                <span className="font-semibold">Service:</span> {service_name}
+              </p>
+              <p className="text-gray-600">
+                <span className="font-semibold">Counselor:</span> {counselor}
+              </p>
+              <p className="text-gray-600">
+                <span className="font-semibold">Location:</span> {location}
+              </p>
+              <p className="text-gray-600">
+                <span className="font-semibold">Price:</span> ${price}
+              </p>
+            </div>
+
+            <label htmlFor="date" className="font-medium">
+              Select a Date:
+            </label>
+            <input
+              type="date"
+              name="date"
+              required
+              className="border rounded-md px-4 py-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+            />
+
+            <button
+              type="submit"
+              className="btn btn-neutral w-full py-2 font-semibold mt-4"
+            >
+              Confirm Appointment
+            </button>
+          </form>
+          <form method="dialog" className="modal-backdrop">
+            <button className="btn btn-sm btn-outline">Close</button>
+          </form>
+        </dialog>
 
         {/* Details Grid */}
         <div className="grid grid-cols-2 gap-6 mt-6">
@@ -126,7 +228,7 @@ const ServiceDetails = () => {
         </div>
 
         {/* Additional Information */}
-        <div className="mt-6 space-y-4">
+        {/* <div className="mt-6 space-y-4">
           <div>
             <h2 className="font-bold text-gray-800">Tools Provided</h2>
             <p className="text-gray-600">{tools_provided}</p>
@@ -139,7 +241,7 @@ const ServiceDetails = () => {
             <h2 className="font-bold text-gray-800">Cancellation Policy</h2>
             <p className="text-gray-600">{cancellation_policy}</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Tags */}
         <div className="mt-6 flex flex-wrap gap-2">

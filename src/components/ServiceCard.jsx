@@ -74,7 +74,7 @@ const ServiceCard = ({ service }) => {
         </div>
 
         <Link
-          to={`/service-details/${id}`}
+          to={`/service/${id}`}
           className="btn btn-outline btn-info"
         >
           Learn More

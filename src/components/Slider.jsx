@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
 
+
 const Slider = () => {
   const [sliderData, setSliderData] = useState([]);
 
@@ -49,6 +50,12 @@ const Slider = () => {
               <p className="text-lg lg:text-xl lg:w-2/5 mx-auto">
                 {slider.description}
               </p>
+              {/* <Link
+                to="/services"
+                className="btn btn-outline btn-neutral text-white mt-6"
+              >
+                Learn More
+              </Link> */}
             </div>
           </SwiperSlide>
         ))}
