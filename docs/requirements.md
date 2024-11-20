@@ -108,7 +108,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 **Others:**
 
 10. **404 page:** Create a 404 page/ not found page. ✅
-11. **Extra route:** Add 1 more extra route to your website. This route should be private and protected, and its contents should be meaningful and relevant.
+11. **Extra route:** Add 1 more extra route to your website. This route should be private and protected, and its contents should be meaningful and relevant. ✅
 
 12. **Dynamic Title:** You need to implement a dynamic title for each page. ✅
 
@@ -156,8 +156,9 @@ For this project, will develop a **Career Counseling Website** designed to guide
 - aos animations ✅
 - add stats section ✅
 - update json data ✅
-- add sponsored section
-- readme file
-- work on footer
-- 1 more private route \*\*\* --> appointment functionality
+- 1 more private route \*\*\* --> appointment functionality ✅
+- work on footer ✅
+- remove appointment (optional)
+- add sponsored section 
+- add readme file
 - make sure to build and deploy

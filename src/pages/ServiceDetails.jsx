@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import defaultUser from "../assets/default_user.png";
 import { FaStar } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -92,6 +93,8 @@ const ServiceDetails = () => {
       );
 
       setIsBooked(true);
+      toast.success("Appointment Booked!");
+
       document.getElementById("my_modal_2").close();
     }
   };
@@ -169,7 +172,7 @@ const ServiceDetails = () => {
               </p>
             </div>
 
-            <label htmlFor="date" className="font-medium">
+            <label className="font-medium">
               Select a Date:
             </label>
             <input
@@ -187,7 +190,7 @@ const ServiceDetails = () => {
             </button>
           </form>
           <form method="dialog" className="modal-backdrop">
-            <button className="btn btn-sm btn-outline">Close</button>
+            <button>Close</button>
           </form>
         </dialog>
 

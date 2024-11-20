@@ -31,7 +31,7 @@ const Login = () => {
         toast.success(`Logged in as ${result.user?.email}`);
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
         toast.error(err.message);
         setLoading(false);
       });
@@ -40,13 +40,13 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         setUser(result.user);
         toast.success(`Logged in as ${result.user?.email}`);
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error(error.code);
         setLoading(false);
       });

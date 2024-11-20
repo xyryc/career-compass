@@ -17,9 +17,7 @@ const ErrorPage = () => {
           It seems you{"'"}ve stumbled on a missing page or broken link.
         </p>
         <Link to="/">
-          <button className="btn btn-neutral mt-6 rounded-md">
-            <span className="mr-2">📰</span> Go Back to News
-          </button>
+          <button className="btn btn-neutral mt-6">Go Back to Home</button>
         </Link>
       </div>
     </div>
