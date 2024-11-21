@@ -113,7 +113,9 @@
    ```bash
    http://localhost:5173/
    ```
+
 ---
 
 ## Contribution
+
 Feel free to fork the repository, make improvements, and submit a pull request. For major changes, open an issue first to discuss the proposed changes.

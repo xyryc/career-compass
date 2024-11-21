@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import SectionTitle from "../components/SectionTitle";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Appointments = () => {
   const { user } = useContext(AuthContext);
@@ -23,6 +24,10 @@ const Appointments = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Appointments | Career Compass</title>
+      </Helmet>
+
       <SectionTitle
         title={"My Appointments"}
         subtitle={

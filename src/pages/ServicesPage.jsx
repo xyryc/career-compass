@@ -1,12 +1,17 @@
 import { useLoaderData } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import ServiceCard from "../components/ServiceCard";
+import { Helmet } from "react-helmet-async";
 
 const ServicesPage = () => {
   const services = useLoaderData();
 
   return (
     <div className="container mx-auto px-4 md:px-0">
+      <Helmet>
+        <title>Services | Career Compass</title>
+      </Helmet>
+
       <SectionTitle
         title={"Discover Comprehensive Career Solutions"}
         subtitle={

@@ -59,7 +59,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
 **Home Page:**
 
-5. **Slider:** Add a slider (Daisy UI slider or Swiper slider) with a minimum of 3 slides.
+5. **Slider:** Add a slider (Daisy UI slider or Swiper slider) with a minimum of 3 slides. ✅
 6. **Services Section: ** In the services section you need to create a JSON minimum of 6 data. You need to show some data on the card layout on the home page. ✅
    **6.1.** Each service card will contain \- JSON Data ✅
    - a relevant Image,
@@ -137,7 +137,7 @@ For this project, will develop a **Career Counseling Website** designed to guide
 
    Make your forgot password feature functional. Clicking "forget password" redirects the user to the forget password page, containing a form with an email field and a reset password button. ✅
 
-- Suppose a user enters an email address on the login page. Show the email also in the forget password form.
+- Suppose a user enters an email address on the login page. Show the email also in the forget password form. ✅
 - On clicking the reset button. Redirect the user to Gmail. ✅
 
 **You need To Submit:**  
